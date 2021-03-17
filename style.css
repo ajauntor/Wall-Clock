@@ -1,0 +1,130 @@
+/* Base CSS */
+.alignleft {
+  float: left;
+  margin-right: 15px;
+}
+.alignright {
+  float: right;
+  margin-left: 15px;
+}
+.aligncenter {
+  display: block;
+  margin: 0 auto 15px;
+}
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 0 solid;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 15px;
+  font-weight: 700;
+}
+body {
+  font-family: 'Akaya Telivigala', cursive;
+}
+html,
+body {
+  height: 100%;
+  background-image: linear-gradient(to right top, #051937, #002a43, #00393e, #03462e, #3f4e1f);
+  font-family: "Raleway", sans-serif;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.clock {
+  background-image: url(assets/img/1.png);
+}
+.clock-area {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 800px;
+  margin: 0 auto;
+}
+.clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50% !important;
+  box-shadow: 0px 4px 15px 0px #000;
+  border: 4px solid #fff;
+}
+.text {
+  color: #fff;
+  font-family: 'Akaya Telivigala', cursive;
+font-family: 'Exo', sans-serif;
+
+}
+
+.text span {
+  color: yellow;
+}
+
+.text p {
+  font-size: 27px;
+  font-family: 'Akaya Telivigala', cursive;
+font-family: 'Exo', sans-serif;
+font-family: 'Patrick Hand', cursive;
+}
+
+.text h1 {
+  font-size: 50px;
+}
+
+.clock .hand {
+  --rotation: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  transform-origin: bottom;
+  border: 1px solid #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 10;
+}
+.clock .hand.second {
+  width: 3px;
+  height: 40%;
+  background-color: red;
+}
+
+.clock .hand.minute {
+  width: 7px;
+  height: 35%;
+  background-color: #333;
+}
+
+.clock .hand.hour {
+  width: 10px;
+  height: 25%;
+  background-color: black;
+}
+.clock::after {
+  background: #000;
+  content: "";
+  left: 50%;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  z-index: 11;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
